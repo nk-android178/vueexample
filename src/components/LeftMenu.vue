@@ -32,18 +32,18 @@
                 :key="ssubitem.id"
                 :index="ssubitem.route"
               >
-                <i class="el-icon-location"></i>
+                <i :class="ssubitem.icon"></i>
                 {{ ssubitem.name }}
               </el-menu-item>
             </el-menu-item-group>
             <el-menu-item v-else :key="subitem.id" :index="subitem.route">
-              <i class="el-icon-location"></i>
+              <i :class="subitem.icon"></i>
               {{ subitem.name }}
             </el-menu-item>
           </template>
         </el-submenu>
         <el-menu-item v-else :key="item.id" :index="item.route">
-          <i class="el-icon-document"></i>
+          <i :class="item.icon"></i>
           {{ item.name }}
         </el-menu-item>
       </template>
@@ -152,26 +152,26 @@ export default {
 .main {
   flex: 1;
 }
-.el-icon-location {
-  background: url("../assets/image/menu_index.png") center no-repeat;
-  background-size: 18px;
-}
-.el-icon-location::before {
-  visibility: hidden;
-  content: "替";
-  font-size: 14px;
-}
-.el-icon-menu {
-  background: url("../assets/image/mark-icon.png") center no-repeat;
-  background-size: 18px;
-}
-.el-icon-menu::before {
-  visibility: hidden;
-  content: "替";
-  font-size: 14px;
-}
+// .el-icon-location {
+//   background: url("../assets/image/menu_index.png") center no-repeat;
+//   background-size: 18px;
+// }
+// .el-icon-location::before {
+//   visibility: hidden;
+//   content: "\e785";
+//   font-size: 14px;
+// }
+// .el-icon-menu {
+//   background: url("../assets/image/mark-icon.png") center no-repeat;
+//   background-size: 18px;
+// }
+// .el-icon-menu::before {
+//   visibility: hidden;
+//   content: "\e785";
+//   font-size: 14px;
+// }
 .el-menu-item.is-active i {
-  color: red;
+  color: inherit;
 }
 .el-menu-item i {
   color: #909399;
