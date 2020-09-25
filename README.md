@@ -1,5 +1,5 @@
 # face-tracking
-
+作为vue开发的基本配置demo
 ## Project setup
 ```
 yarn install
